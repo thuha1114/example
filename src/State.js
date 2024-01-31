@@ -100,7 +100,7 @@ function State() {
   //Nếu trên localStorage không có item nào là jobs thì khởi tạo là mảng rỗng và ngược lại.
   const [jobs, setJobs] = useState(() => {
     var storageJobs = JSON.parse(localStorage.getItem('jobs'))
-    return storageJobs;
+    return storageJobs ? storageJobs : []
   })
 
   const handleAdd = () =>{
